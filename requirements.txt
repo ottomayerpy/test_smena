@@ -1,0 +1,6 @@
+django==3.2.7
+django-rest-framework==0.1.0
+django_rq==2.5.1
+psycopg2==2.9.3
+django-redis==5.2.0
+requests==2.27.1

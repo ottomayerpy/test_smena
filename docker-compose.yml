@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:9.6
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /tmp
+    ports:
+      - 5432:5432
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+  wkhtmltopdf:
+    image: openlabs/docker-wkhtmltopdf-aas:latest
+    ports:
+      - 80:80
+    volumes:
+      - .:/data
