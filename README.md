@@ -10,7 +10,6 @@ cd test_smena
 python3 -m venv env
 source env/bin/activate
 pip3 install -r requirements.txt
-python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
 ```
@@ -20,5 +19,5 @@ docker-compose up
 ```
 После загрузки контейнеров запускаем rq:
 ```bash
-python3 manage.py rq_worker
+python3 manage.py rqworker
 ```

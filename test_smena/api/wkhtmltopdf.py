@@ -4,10 +4,10 @@ import json
 import requests
 from test_smena.settings import MEDIA_ROOT, WKHTMLTOPDF_URL
 
-from .models import DataOrder
+from .dataclasses import Order
 
 
-def html_to_pdf(html: str, order: DataOrder, type_check: str) -> str:
+def html_to_pdf(html: str, order: Order, type_check: str) -> str:
     """ Конвертирование html шаблона в pdf документ при помощи wkhtmltopdf воркера.
 
     Args:
